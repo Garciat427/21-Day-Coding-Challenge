@@ -1,9 +1,9 @@
 <h1 align="center">
   21-Day-Coding-Challenge         
 </h1>
-<span align="center">
+<h1 align="center">
   <img src = "https://coding-challenge.lighthouselabs.ca/img/about/Experience_needed.png" align="center"></img>         
-</span>
+</m1>
 
 ### About the challenge
 This reposotory stores all the code I developed for the challenge problems given during the 21 day coding challenge presented by <a href="https://www.lighthouselabs.ca/" target="_blank">Lighthouse Labs</a>
