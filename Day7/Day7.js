@@ -1,4 +1,4 @@
-//Challenge #6 - Turn Out For What
+//Challenge #7 - You Choose, (You Don't) Lose
 const voterTurnout = (voter_signatures, voter_ids) => {
    if (voter_signatures.length !== voter_ids.length) {
       return (false);
