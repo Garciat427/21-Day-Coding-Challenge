@@ -1,54 +1,42 @@
-# Challenge #8 - Trash to Treasure
+# Challenge #10 - SmartParking
 
-<p>As Mayor, you want one of your legacies to be bettering street design enough to improve traffic flow and reduce congestion. You've decided to start by installing special sensors on some streets to monitor how often cars pass by, and track their speeds.
+<p>The parking lot in the Codeville Devtropolis Shopping Mall needs an upgrade, and you've decided this is the perfect opportunity to install a smart parking system.
+
+The system will use special parking sensors to keep track of all parking spots and monitor which ones are available. Every time a vehicle enters the parking lot, the system directs them to an available spot for their particular vehicle type, or notifies them that no spots are available.
 </p>
 
 ## Instructions: 
 
-<p>Complete the function, carPassing(cars, speed), that takes in an array of car objects, and the speed of a car as it passes the sensor. This function should create a new object with with a property called speed, and another property called time and add it to the cars array. We can retrieve the current time, for setting the time property, by using the Date.now() function, which is built into JavaScript!
+<p>We need to write a function called whereCanIPark() that returns the coordinates of an available parking spot for the vehicle, or returns false if there is no available spot. Our function receives an array of arrays representing parking spots, and a string with type of the vehicle that is looking for a parking spot.
 
-Our function should return an array that includes all of the elements in cars as well as our new element.
+There are three kinds of possible vehicles: regular cars, small cars, and motorcycles. Regular cars can only park in R spots. Small cars can park in R or S spots. Motorcycles can park in R, S, or M spots. In the array of parking spots, spots are written in both lower-case and upper-case. An upper-case letter means that the particular spot is AVAILABLE, while lower-case letters mean that the spot is UNAVAILABLE.
+
+Our function must return an array with the coordinates of the spot as an [X, Y] pair. See the example input and output below for an illustration.
+
+Note: There may be multiple available spots for a particular vehicle. It does not matter which spot your function chooses, as long as the spot is available. And if there are no available spots, remember to return false.
+</p>
+
+<p>***Due to terrible coding by the tester, the array returns the opposite vs the test code tester***
 </p>
 
 ### Example 
 #### Input
 ``` 
-const cars = [
-   {
-      time: 1568329654807,
-      speed: 40,
-   },
-   {
-      time: 1568329821632,
-      speed: 42,
-   },
-   {
-      time: 1568331115463,
-      speed: 35
-   }
+const spots = [
+// COLUMNS ARE X
+//    0    1    2    3    4    5
+      ['s', 's', 's', 'S', 'R', 'M'], // 0 ROWS ARE Y
+      ['s', 'M', 's', 'S', 'R', 'M'], // 1
+      ['s', 'M', 's', 'S', 'R', 'm'], // 2
+      ['S', 'r', 's', 'm', 'R', 'M'], // 3
+      ['S', 'r', 's', 'm', 'R', 'M'], // 4
+      ['S', 'r', 'S', 'M', 'M', 'S'], // 5
 ]
-   
-const speed = 38
+
+const vehicle = 'regular' // possible options are 'regular', 'small', or 'motorcycle'
 ```
 
 #### Output
 ```
-[
-   {
-      time: 1568329654807,
-      speed: 40,
-   },
-   {
-      time: 1568329821632,
-      speed: 42,
-   },
-   {
-      time: 1568331115463,
-      speed: 35
-   },
-   {
-      time: 1568431216417,
-      speed: 38
-   }
-]
+[4, 0]
 ```
