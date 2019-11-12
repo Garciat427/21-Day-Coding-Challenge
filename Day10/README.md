@@ -1,4 +1,4 @@
-# Challenge #9 - Driving Mayor Daisy
+# Challenge #8 - Trash to Treasure
 
 <p>As Mayor, you want one of your legacies to be bettering street design enough to improve traffic flow and reduce congestion. You've decided to start by installing special sensors on some streets to monitor how often cars pass by, and track their speeds.
 </p>
